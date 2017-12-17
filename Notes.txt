@@ -1,0 +1,43 @@
+('Verizon', VZ, Communications) 48.87
+('Chevron Corp.', CVX, Energy)113.54
+('Caterpillar Inc.', CAT, Construction)137.81
+(International Business Machines Corp., IBM, Technology)153
+(ExxonMobil Corp.,XOM, Energy)
+(Pfizer Inc.,PFE, Medicine)
+(Merck & Co. Inc., MRK, Medicine)
+(Proctor & Gamble Co., PG, Consumer Goods )
+(Wal-Mart Stores, Inc., WMT, Retail)
+(Cisco Systems Inc., CSCO, technology )
+Microsoft, MSFT,Technology)
+(PepsiCo,PEP,Consumer Goods)
+(3M, MMM, Industrial_Goods )
+(Dover, DOV, Industrial Goods)
+(MasterCard, MA, Financial )
+(Starwood Property Trust,STWD, Financial)
+(Apple, AAPL, Consumer Goods)
+
+According to CNBC you should own no more than ten no fewer than five.
+https://www.cnbc.com/id/100450613
+
+List of stocks this program uses inspired by 
+https://www.gobankingrates.com/investing/10-stocks-beginners-try-2016/
+
+and
+
+https://www.gobankingrates.com/investing/9-safe-stocks-first-time-investors/
+
+
+Inspiration for percentage of net income that should be saved or invested(5-10%).
+Which I interpreted as 5-10% of monthly net income
+http://www.investopedia.com/articles/pf/07/budget-qs.asp?lgl=myfinance-layout-no-ads
+
+What inspired the calculation for number of stocks to buy
+
+	Position Size formula(the percentage above will be the Max risk price)
+	https://www.thestreet.com/story/13588155/1/this-is-why-how-many-shares-matters.html
+
+	What inspired the value for the stop loss(the stock price whered youd want to sell if it decreased(stop price)
+
+	10-20% of original price
+	http://finance.zacks.com/percentage-should-set-stop-loss-investing-stock-market-4421.html
+

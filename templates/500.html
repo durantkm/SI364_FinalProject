@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>Hey How's It Goin!</h1>
+<h2>Appears you caught us during maintenance,<br>but don't fret we'll be back up and runnin soon!</h2>
+<img src = "{{url_for('static', filename='maintenance.gif')}}">
+
+<h2>In the mean time here's some links with some interesting investment facts<br> for your perusing pleasure!</h2>
+<ul>
+	{% for link in extra_info %}
+    <li><a href={{link[0]}}><b>{{link[1]}}</b></a></li>
+    {% endfor %}
+</ul>    
+
+</body>
+</html>

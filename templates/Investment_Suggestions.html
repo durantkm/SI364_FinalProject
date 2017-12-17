@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+</style>
+</head>
+<body>
+
+{%if result[1] == 'No'%}
+<h1> Your Investment Suggestions Are In!</h1>
+{% elif result[1] == 'HadTo' %}
+<h1> ...With Some Unexpected Deliberation Your Investment Suggestions Are In!</h1>
+{% else %}
+<h1> After Double Checking Our Records Your Investment Suggestions Are In!</h1>
+{% endif %}
+
+
+<p>Based on your state and our records. We've provided you with nine company stock options according to your states average income Feel free to check out more information on the companies by clicking on the company name!<b>Note: Number of shares to buy is based on you selecting any five of the nine listed companies.</b></p>
+
+<h3>When choosing your 5 consider options from different industries to help with the overall risk factor.</h3>
+
+<table>
+  <tr>
+    <th>Company</th>
+    <th>Number of Shares(Buyable)</th>
+    <th>Current Stock Price</th>
+    <th>Industry</th>
+  </tr>
+  {% for suggestion in result[0] %}
+  <tr>
+  <td><a href={{suggestion[4]}}><b>{{suggestion[0]}}</b></a>
+  </td>
+  <td>
+  {{suggestion[1]}}
+  </td>
+    <td>
+  {{suggestion[2]}}
+  </td>
+    <td>
+  {{suggestion[3]}}
+  </td>
+  </tr>
+  {% endfor %}
+</table>
+
+
+<p2>We are happy to provide these suggestions as a tool for aspiring investors to get the ball rolling, but <b>please take these suggestions with a grain of salt</b> as this tool is still in early development</p2>
+
+</body>
+</html>
