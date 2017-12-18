@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<body>
+	<h1>Give Us Your Feedback</h1>
+
+	<h4>Have some feedback and a business you'd like to add to our database? Fill out our Feedback Form below!</h4>
+	<div>
+	{% for message in get_flashed_messages() %}
+	{{ message }}
+	{% endfor %}
+	</div>
+	<form method="POST">
+	{{ form.hidden_tag() }}
+	{{ form.Satisfaction.label }} {{ form.Satisfaction() }}
+	{{ form.Feedback.label }} {{ form.Feedback() }}
+	{{ form.company_name.label }} {{ form.company_name() }}
+	{{ form.ticker_symbol.label }} {{ form.ticker_symbol() }}
+	{{ form.industry.label }} {{ form.industry() }}
+	{{ form.link_to_comp_info.label }} {{ form.link_to_comp_info() }}
+	{{ form.submit() }}
+	</form>
+	<br><a href="{{url_for('Investment_App_Form')}}"><h3>Return To Your Homepage</h3>></a>
+</body>

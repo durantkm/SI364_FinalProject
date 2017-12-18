@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+{% block content %}
+	<h1>Howdy {{investor_name}}, Welcome To Your Home Page</h1>><br>
+	<img src="{{ url_for('investor_profile_image')}}" width='400' length='700'></img></br>
+	<h3>Here You can request new investing suggestions, access a list of all your previous suggestions, access a list off all available businesses, and even add a business that isn't already a part of our database while giving us feedback</h3>
+
+<h4> Request a new suggestion here</h4>
+<form method ="POST" action = "{{url_for('Investment_App_Suggestions')}}">
+	{{form.hidden_tag()}}
+    {% for message in get_flashed_messages() %}
+    {{ message }}
+    {% endfor %}
+    <p>{{ form.State.label }}{{ form.State() }}</p>
+    <p>{{ form.New_Data_Request.label }}{{ form.New_Data_Request() }}</p>
+    {{ form.submit() }}
+</form>
+
+<a href ="{{url_for('available_businesses')}}"><h4>Access Our Bussiness Database</h4></a>
+
+<a href ="{{url_for('suggestion_history')}}"><h4>Your Previous Suggestions</h4></a>
+
+<a href ="{{url_for('feedback')}}"><h4>Got A Business To Add And A Suggestion For Us, <b>Submit Here</b></h4></a>
+
+<a href ="{{url_for('logout')}}"><h1>LOG OUT</h1>></a>
+{% endblock %}

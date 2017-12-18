@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<body>
+	<h1>Here are the businesses currently available in our database!</h1>
+	<ul>
+        {% for business in available_businesses %}
+        <li> <b>{{business[0]}} {{business[1]}} {{business[2]}}</b> <a href={{business[3]}}><b>{{business[3]}}</b></a>
+        </li>
+        {% endfor %}
+    </ul>
+        <br><a href="{{url_for('Investment_App_Form')}}"><h3>Return To Your Homepage</h3>></a>
+</body>
+</html>

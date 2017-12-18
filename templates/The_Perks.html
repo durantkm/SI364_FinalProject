@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <body>
+    <a href = "{{url_for('Investor_Login')}}"><b>Already A Member Login Here</b></a>
+    <br>
+    <h1>Join Fellow Investors</h1>
+    <p> Our team has put our heart and soul into creating a handy app for would be investors that's easy to use and understand. Here's what you've got to look forward to when you join the Investor Handbook's continuously growing community.</p>
+    <ul>
+    <li>
+    <b>Your Own Personal Homepage</b> where you have access to the suggestion form, previous suggestions, and more as we develop the IH!   
+    </li>
+    <li>
+    <b>Access to a database containing numerous businesses, such as:</b>
+     <ul>
+        {% for business in available_businesses %}
+        <li> <b>{{business[0]}} {{business[1]}} {{business[2]}}</b> <a href={{business[3]}}><b>{{business[3]}}</b></a>
+        </li>
+        {% endfor %}
+    </ul>
+    </li>
+    <li>
+    <b>Comprehensive and Easy to Understand Suggestions</b><br>
+    <img src = "{{url_for('static',filename='Suggestion_Example.png')}}" height='400' width='900'></img>
+        <br>
+    </li>
+    <li>
+    <b>Access to a Team of Dedicated Developers</b> who you can communicate with through our feedback form
+    </li>
+    <li>
+    <b>Ability to Add Businesses through the Feedback Form</b> and then have immediate access to them in your suggesstions   
+    </li>
+    </ul>
+    <a href = "{{url_for('join_fellow_users')}}"><h4>Like What You See? Click Here To Join</h4></a>
+    </body>
+</html>

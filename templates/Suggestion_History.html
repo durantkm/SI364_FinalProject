@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+</style>
+</head>
+
+<h1>We have provided tables consisting of your previous Suggestions starting from the most recent</h1>
+
+<br><a href="{{url_for('Investment_App_Form')}}"><h3>Return To Your Homepage</h3>></a>
+
+{% for suggestion in all_suggestions %}
+<table>
+  <tr>
+    <th>Company</th>
+    <th>Number of Shares(Buyable)</th>
+    <th>Current Stock Price</th>
+    <th>Industry</th>
+  </tr>
+  {% for suggestion_data in suggestion %}
+  <tr>
+    <td><a href={{suggestion_data[4]}}><b>{{suggestion_data[0]}}</b></a></td>
+    <td>{{suggestion_data[1]}}</td>
+    <td>{{suggestion_data[2]}}</td>
+    <td>{{suggestion_data[3]}}</td>
+  </tr>
+  {% endfor %}
+</table><br>
+{% endfor %}
+
+<br><a href="{{url_for('Investment_App_Form')}}"><h3>Return To Your Homepage</h3>></a>
+</html>

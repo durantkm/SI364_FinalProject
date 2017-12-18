@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 <html>
-	<body>
-    	<h1>Welcome to the Investment Suggestion Service</h1>
-        <img src = "{{url_for('static', filename='financial_success.jpeg')}}">
+    <body>
+        <h1>Welcome to the Investment Suggestion Service</h1>
+        <img src = "{{url_for('static',filename='financial_success.jpeg')}}">
         <br>
         <h2>About the Program</h2>
-		<p>Ever thought about investing but didn't quite know where to start well we're here to help! <br>Our goal is to provide each user with suggestions for five companies worth investing in, <br>as well as how many shares to invest into each company according to the average income
+        <p>Ever thought about investing but didn't quite know where to start well we're here to help! <br>Our goal is to provide each user with suggestions for ten companies worth investing in, <br>as well as how many shares to invest into each company according to the average income
         <br> of the state they live in.
         </p> 
-		<h2>Interested! Let's Get Started!</h2>
-        <a href="{{url_for('Investment_App_Form')}}"><h3>Click here to go to our 		form.
+        <h2>Click the link below to login and Get Started!</h2>
+        <a href="{{url_for('Investor_Login')}}"><h3>Investor Login
         </h3></a>
-        </a>
+        <h2>Not a Member Yet? Consider Joining Fellow Investors</h2>
+        <a href="{{url_for('the_perks')}}"><h3>Check Out The Perks</h3></a>
         <h2>Additional Information(For Personal Research)</h2>
         <p>Here's some links with interesting factoids. Be sure to check'em Out!</p>
         <ul>
@@ -19,5 +20,5 @@
         <li><a href={{link[0]}}><b>{{link[1]}}</b></a></li>
         {% endfor %}
         </ul>    
-	</body>
+    </body>
 </html>

@@ -3,9 +3,35 @@
 <body>
 <h1>Hey How's It Goin!</h1>
 <h2>Appears you caught us during maintenance,<br>but don't fret we'll be back up and runnin soon!</h2>
-<img src = "{{url_for('static', filename='maintenance.gif')}}">
+<img src = "{{url_for('static', filename='work_in_progress.jpg')}}">
 
-<h2>In the mean time here's some links with some interesting investment facts<br> for your perusing pleasure!</h2>
+<h2>In the mean time here's some information on our app The Investorss Handbook, as well as some additional interesting investment facts<br> for your perusing pleasure!</h2>
+
+<h3>About the Program</h3>
+        <p>Ever thought about investing but didn't quite know where to start well we're here to help! <br>Our goal is to provide each user with suggestions for ten companies worth investing in, <br>as well as how many shares to invest into each company according to the average income
+        <br> of the state they live in.
+
+<h3>Join Fellow Investors</h3>
+    <p> Our team has put our heart and soul into creating a handy app for would be investors that's easy to use and understand. Here's what you've got to look forward to when you join the Investor Handbook's continuously growing community.</p>
+    <ul>
+    <li>
+    <b>Your Own Personal Homepage</b> where you have access to the suggestion form, previous suggestions, and more as we develop the IH!   
+    </li>
+    <li>
+    <b>Access to a database containing numerous businesses</b>
+    </li>
+    <li>
+    <b>Comprehensive and Easy to Understand Suggestions</b><br>
+    <img src = "{{url_for('static',filename='Suggestion_Example.png')}}" height='400' width='900'></img>
+        <br>
+    </li>
+    <li>
+    <b>Access to a Team of Dedicated Developers</b> who you can communicate with through our feedback form
+    </li>
+    <li>
+    <b>Ability to Add Businesses through the Feedback Form</b> and then have immediate access to them in your suggesstions   
+    </li>
+    </ul>
 <ul>
 	{% for link in extra_info %}
     <li><a href={{link[0]}}><b>{{link[1]}}</b></a></li>

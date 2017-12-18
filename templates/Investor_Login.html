@@ -1,0 +1,19 @@
+<h1> Welcome Back Investors!</h1>
+<h2> Login Below to continue where you left off</h2>
+
+<div>
+{% for message in get_flashed_messages() %}
+{{ message }}
+{% endfor %}
+</div>
+
+
+<form method="POST">
+	{{ form.hidden_tag() }}
+	{{ form.email.label }} {{ form.email() }}
+	{{ form.password.label }} {{ form.password() }}
+	{{ form.submit.label }}{{ form.submit() }}
+</form>
+
+<h2>Not a Member Yet? Consider Joining Fellow Investors</h2>
+     <a href="{{url_for('the_perks')}}"><h3>Check Out The Perks</h3></a>

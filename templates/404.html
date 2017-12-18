@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html>
 <body>
-<h1>Whoops! Looks like you've gotten ahead of yourself...and the program</h1>
-<img src = "{{url_for('static', filename='facepalm.gif')}}">
+<h1>Hmm it appears the page you're looking for is in another castle!</h1>
+<img src = "{{url_for('static', filename='another_castle.jpg')}}">
 
-<a href = "{{url_for('Home_Page')}}"><h3>Lets head back to the home page shall we? Click here!</h3></a>
+<a href = "{{url_for('Home_Page')}}"><h3>Lets head back to the Investor's Handbook home page shall we? Click here!</h3></a>
+<h1>OR</h1>
+<h2>Not a Member Yet? Consider Joining Fellow Investors</h2>
+        <a href="{{url_for('the_perks')}}"><h3>Check Out The Perks</h3></a>
 </body>
 </html>
