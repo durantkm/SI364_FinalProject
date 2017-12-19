@@ -28,7 +28,7 @@
 		--export MAIL_USERNAME = gmail username(for email)
 		--export MAIL_PASSWORD = gmail username(for email)
 		--export FLASKY_ADMIN = "Your actual gmail email"
-
+		*You'll also want to run the program by typing python Final_Project.py runserver it will run on local host:5000
 
 ## The Pages
 
